@@ -1,0 +1,74 @@
+/* Reset some default browser styles */
+body, h1, h2, h3, h4, h5, h6, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Set box-sizing to border-box for easier layout calculations */
+* {
+  box-sizing: border-box;
+}
+
+/* Global styles */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.section {
+  position: relative;
+  float: left;
+  width: 100%;
+  padding: 20px;
+  border: 1px solid black;
+  margin-bottom: 20px;
+}
+
+.section-title {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  background-color: #FFD700; /* Set your desired background color */
+  color: #000000; /* Set a contrasting text color */
+  border: 1px solid black;
+}
+
+/* Media queries for different screen sizes */
+@media (min-width: 992px) {
+  /* Desktop view */
+  .section {
+    width: 33.33%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Tablet view */
+  .section {
+    width: 50%;
+  }
+  
+  .section:nth-child(3) {
+    clear: both;
+  }
+}
+
+/* Mobile view doesn't require additional styles */
+
+/* Example colors for the section backgrounds */
+.section:nth-child(1) {
+  background-color: #FF0000;
+}
+
+.section:nth-child(2) {
+  background-color: #00FF00;
+}
+
+.section:nth-child(3) {
+  background-color: #0000FF;
+}
